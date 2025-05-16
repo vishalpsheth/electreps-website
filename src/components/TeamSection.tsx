@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Linkedin } from 'lucide-react';
@@ -9,37 +8,37 @@ const TeamSection = () => {
       name: "Manjunath Rao",
       role: "CEO & Co-Founder",
       image: "/assets/images/team/manjunath.jpg",
-      fallbackImage: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+      fallbackImage: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=256&q=80",
       linkedin: "https://www.linkedin.com/in/manjunath-rao-9ab95721/",
       experience: "Infosys, MetricStream",
-      education: "A seasoned technology and product leader with 20 years of global experience across India, the U.S., and other international markets. Proven track record at leading firms like Infosys and MetricStream, with deep expertise in consulting, product strategy, and driving large-scale digital transformations. Holds a B.E. in Computer Science from Bangalore Institute of Technology"
+      education: "A seasoned technology and product leader with 20 years of global experience across India, the U.S., and other international markets..."
     },
     {
       name: "Vishal Sheth",
       role: "CTO & Co-Founder",
       image: "/assets/images/team/vishal.jpg",
-      fallbackImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+      fallbackImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=256&q=80",
       linkedin: "https://www.linkedin.com/in/vpsheth/",
       experience: "GoCoop, Indecomm",
-      education: "An accomplished technology architect and engineering leader with over 15 years of experience driving innovation at companies like GoCoop and Indecomm. Holds a Master's in Data Science and brings deep expertise in cloud infrastructure, video transcoding, big data (Hadoop), and scalable server architecture. Renowned for building robust, high-performance systems that power modern digital platforms"
+      education: "An accomplished technology architect and engineering leader with over 15 years of experience..."
     },
     {
       name: "Raghavendra K G",
       role: "COO & Co-Founder",
       image: "/assets/images/team/raghavendra.jpg",
-      fallbackImage: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+      fallbackImage: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=256&q=80",
       linkedin: "https://www.linkedin.com/in/raghavendra-gopal-rao-43360818/",
       experience: "Kshema Tech, Lotus Labs",
-      education: "A strategic operations and business management leader with over 25 years of experience in senior roles across supply chain, project management, financial accounting, and corporate operations. With a strong foundation from organizations like Kshema Tech and Lotus Labs, and an MBA in International Business, he brings a proven ability to streamline complex processes and drive organizational efficiency at scale."
+      education: "A strategic operations and business management leader with over 25 years of experience..."
     },
     {
       name: "Prakash B T",
       role: "Solution Architect",
       image: "/assets/images/team/prakash.jpg",
-      fallbackImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+      fallbackImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=256&q=80",
       linkedin: "https://www.linkedin.com/in/prakashbt/",
       experience: "PMP, CSM Certified | Web Development Specialist",
-      education: "A certified PMP and CSM professional, and a seasoned web development specialist with 20 years of experience leading cross-functional teams in project management, product development, and end-to-end web solutions. Known for delivering complex digital products with precision, efficiency, and a deep understanding of agile methodologies and modern tech stacks"
+      education: "A certified PMP and CSM professional, and a seasoned web development specialist with 20 years of experience..."
     }
   ];
 
@@ -59,13 +58,11 @@ const TeamSection = () => {
             <Card key={index} className="border-none shadow-lg overflow-hidden">
               <div className="aspect-[3/4] relative">
                 <img 
-                  src={`${import.meta.env.BASE_URL}${member.image}`}
+                  src={member.image}
                   alt={member.name} 
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    // @ts-ignore - currentTarget is valid
                     e.currentTarget.onerror = null;
-                    // @ts-ignore - currentTarget is valid
                     e.currentTarget.src = member.fallbackImage;
                   }}
                 />
