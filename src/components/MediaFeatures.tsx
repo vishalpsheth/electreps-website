@@ -1,27 +1,28 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const MediaFeatures = () => {
-  const mediaOutlets = [
+const baseUrl = import.meta.env.BASE_URL;
+ 
+const mediaOutlets = [
     {
       name: "YourStory",
-      logo: "/assets/images/yourstory-logo.png",
+      logo: `${baseUrl}assets/images/yourstory-logo.png`,
       fallback: "https://via.placeholder.com/150x60?text=YourStory"
     },
     {
       name: "Business Standard",
-      logo: "/assets/images/business-standard-logo.png",
+      logo: `${baseUrl}assets/images/business-standard-logo.png`,
       fallback: "https://via.placeholder.com/150x60?text=Business+Standard"
     },
     {
       name: "ANI",
-      logo: "/assets/images/ani-logo.png",
+      logo: `${baseUrl}assets/images/ani-logo.png`,
       fallback: "https://via.placeholder.com/150x60?text=ANI"
     },
     {
       name: "The Times of India",
-      logo: "/assets/images/times-of-india-logo.png",
+      logo: `${baseUrl}assets/images/times-of-india-logo.png`,
       fallback: "https://via.placeholder.com/150x60?text=Times+of+India"
     }
   ];
