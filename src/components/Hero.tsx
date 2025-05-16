@@ -46,7 +46,7 @@ const Hero = () => {
             <div className="flex justify-center">
               <div className="px-8 py-3 bg-white shadow-md rounded-lg">
                 <img 
-                  src="/assets/images/google-logo.png" 
+		  src={`${import.meta.env.BASE_URL}assets/images/google-logo.png`}
                   alt="Google" 
                   className="h-8"
                   onError={(e) => {

@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <a href="#" className="text-2xl font-bold text-publicnext-blue flex items-center">
             <img 
-              src="/assets/images/logo.png" 
+	      src={`${import.meta.env.BASE_URL}assets/images/logo.png`}
               alt="ElectReps Logo" 
               className="h-8 mr-2"
               onError={(e) => {

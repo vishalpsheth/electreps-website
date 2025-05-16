@@ -59,7 +59,7 @@ const TeamSection = () => {
             <Card key={index} className="border-none shadow-lg overflow-hidden">
               <div className="aspect-[3/4] relative">
                 <img 
-                  src={member.image} 
+                  src={`${import.meta.env.BASE_URL}${member.image}`}
                   alt={member.name} 
                   className="w-full h-full object-cover"
                   onError={(e) => {
