@@ -11,7 +11,7 @@ const TeamSection = () => {
       fallbackImage: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=256&q=80",
       linkedin: "https://www.linkedin.com/in/manjunath-rao-9ab95721/",
       experience: "Infosys, MetricStream",
-      education: "A seasoned technology and product leader with 20 years of global experience across India, the U.S., and other international markets..."
+      education: "A seasoned technology and product leader with 20 years of global experience across India, the U.S., and other international markets. Proven track record at leading firms like Infosys and MetricStream, with deep expertise in consulting, product strategy, and driving large-scale digital transformations. Holds a B.E. in Computer Science from Bangalore Institute of Technology"
     },
     {
       name: "Vishal Sheth",
@@ -20,7 +20,7 @@ const TeamSection = () => {
       fallbackImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=256&q=80",
       linkedin: "https://www.linkedin.com/in/vpsheth/",
       experience: "GoCoop, Indecomm",
-      education: "An accomplished technology architect and engineering leader with over 15 years of experience..."
+      education: "An accomplished technology architect and engineering leader with over 15 years of experience driving innovation at companies like GoCoop and Indecomm. Holds a Master's in Data Science and brings deep expertise in cloud infrastructure, video transcoding, big data (Hadoop), and scalable server architecture. Renowned for building robust, high-performance systems that power modern digital platforms"
     },
     {
       name: "Raghavendra K G",
@@ -29,7 +29,7 @@ const TeamSection = () => {
       fallbackImage: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=256&q=80",
       linkedin: "https://www.linkedin.com/in/raghavendra-gopal-rao-43360818/",
       experience: "Kshema Tech, Lotus Labs",
-      education: "A strategic operations and business management leader with over 25 years of experience..."
+      education: "A strategic operations and business management leader with over 25 years of experience in senior roles across supply chain, project management, financial accounting, and corporate operations. With a strong foundation from organizations like Kshema Tech and Lotus Labs, and an MBA in International Business, he brings a proven ability to streamline complex processes and drive organizational efficiency at scale."
     },
     {
       name: "Prakash B T",
@@ -38,7 +38,7 @@ const TeamSection = () => {
       fallbackImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=256&q=80",
       linkedin: "https://www.linkedin.com/in/prakashbt/",
       experience: "PMP, CSM Certified | Web Development Specialist",
-      education: "A certified PMP and CSM professional, and a seasoned web development specialist with 20 years of experience..."
+      education: "A certified PMP and CSM professional, and a seasoned web development specialist with 20 years of experience leading cross-functional teams in project management, product development, and end-to-end web solutions. Known for delivering complex digital products with precision, efficiency, and a deep understanding of agile methodologies and modern tech stacks"
     }
   ];
 
@@ -55,31 +55,38 @@ const TeamSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member, index) => (
-            <Card key={index} className="border-none shadow-lg overflow-hidden">
-              <div className="aspect-[3/4] relative">
-                <img 
+            <Card
+              key={index}
+              className="border-none shadow-lg flex flex-col overflow-visible h-full"
+            >
+              <div className="aspect-[3/4] relative w-full">
+                <img
                   src={member.image}
-                  alt={member.name} 
+                  alt={member.name}
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.currentTarget.onerror = null;
                     e.currentTarget.src = member.fallbackImage;
                   }}
                 />
-                <a 
-                  href={member.linkedin} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="absolute top-3 right-3 p-2 bg-white/90 rounded-full hover:bg-publicnext-purple hover:text-white transition-colors"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
               </div>
-              <CardContent className="p-5">
+              <CardContent className="p-5 flex-grow">
                 <h3 className="font-bold text-lg mb-1">{member.name}</h3>
                 <p className="text-publicnext-purple font-medium text-sm mb-2">{member.role}</p>
-                <p className="text-gray-500 text-xs mb-1">Experience: {member.experience}</p>
-                <p className="text-gray-600 text-xs">{member.education}</p>
+                <p className="text-gray-500 text-xs mb-1">
+                  <span className="font-semibold">Experience:</span> {member.experience}
+                </p>
+                <p className="text-gray-600 text-xs whitespace-pre-line">
+                  {member.education}
+                </p>
               </CardContent>
             </Card>
           ))}
