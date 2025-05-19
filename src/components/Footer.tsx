@@ -20,20 +20,20 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Services</h3>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="#work" className="hover:text-publicnext-purple transition-colors">Web Development</a></li>
-              <li><a href="#work" className="hover:text-publicnext-purple transition-colors">Mobile App Development</a></li>
-              <li><a href="#work" className="hover:text-publicnext-purple transition-colors">Cloud Solutions</a></li>
-              <li><a href="#work" className="hover:text-publicnext-purple transition-colors">Enterprise Software</a></li>
-              <li><a href="#work" className="hover:text-publicnext-purple transition-colors">AI/ML Solutions</a></li>
+              <li><HashLink smooth to="#work" className="hover:text-publicnext-purple transition-colors">Web Development</HashLink></li>
+              <li><HashLink smooth to="#work" className="hover:text-publicnext-purple transition-colors">Mobile App Development</HashLink></li>
+              <li><HashLink smooth to="#work" className="hover:text-publicnext-purple transition-colors">Cloud Solutions</HashLink></li>
+              <li><HashLink smooth to="#work" className="hover:text-publicnext-purple transition-colors">Enterprise Software</HashLink></li>
+              <li><HashLink smooth to="#work" className="hover:text-publicnext-purple transition-colors">AI/ML Solutions</HashLink></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-xl font-bold mb-4">Company</h3>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="#about" className="hover:text-publicnext-purple transition-colors">About Us</a></li>
-              <li><a href="#team" className="hover:text-publicnext-purple transition-colors">Our Team</a></li>
-              <li><a href="#footer" className="hover:text-publicnext-purple transition-colors">Contact</a></li>
+              <li><HashLink smooth to="#about" className="hover:text-publicnext-purple transition-colors">About Us</HashLink></li>
+              <li><HashLink smooth to="#team" className="hover:text-publicnext-purple transition-colors">Our Team</HashLink></li>
+              <li><HashLink smooth to="#footer" className="hover:text-publicnext-purple transition-colors">Contact</HashLink></li>
             </ul>
           </div>
           
