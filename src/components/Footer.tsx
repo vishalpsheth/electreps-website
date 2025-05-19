@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Mail, Phone, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
