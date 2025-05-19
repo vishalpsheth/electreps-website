@@ -29,7 +29,7 @@ const AboutSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Our Company</h2>
           <div className="h-1 w-20 bg-publicnext-purple mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            PublicNext is a leading technology platform specializing in web and app development, cloud solutions, 
+            ElectReps is a leading technology platform specializing in web and app development, cloud solutions, 
             and high-performance enterprise software. We focus on building scalable, secure, and data-driven 
             digital experiences tailored to clients' needs.
           </p>
