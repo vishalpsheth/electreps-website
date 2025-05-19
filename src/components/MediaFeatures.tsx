@@ -6,24 +6,28 @@ const MediaFeatures = () => {
 
   const mediaOutlets = [
     {
-      name: "YourStory",
-      logo: `${baseUrl}assets/images/yourstory-logo.png`,
+      name: "Money Control",
+      logo: `${baseUrl}assets/images/money-control-logo.png`,
       fallback: "https://via.placeholder.com/150x60?text=YourStory"
+      url: "https://www.moneycontrol.com/news/business/startup/google-and-meity-startup-hub-announce-2023-cohort-of-100-indian-startups-10326791.html#google_vignette"
     },
     {
       name: "Business Standard",
       logo: `${baseUrl}assets/images/business-standard-logo.png`,
       fallback: "https://via.placeholder.com/150x60?text=Business+Standard"
+      url: "https://www.business-standard.com/content/press-releases-ani/publicnext-has-been-selected-as-a-recipient-of-the-google-news-initiative-gni-innovation-challenge-asia-pacific-along-with-funding-from-google-123010400547_1.html"
     },
     {
       name: "ANI",
       logo: `${baseUrl}assets/images/ani-logo.png`,
       fallback: "https://via.placeholder.com/150x60?text=ANI"
+      url:  "https://www.aninews.in/news/business/business/publicnext-has-been-selected-as-a-recipient-of-the-google-news-initiative-gni-innovation-challenge-asia-pacific-along-with-funding-from-google20230104131434/"
     },
     {
       name: "The Times of India",
       logo: `${baseUrl}assets/images/times-of-india-logo.png`,
       fallback: "https://via.placeholder.com/150x60?text=Times+of+India"
+      url:  "https://timesofindia.indiatimes.com/gadgets-news/appscale-academys-class-of-2023-meity-startup-hub-and-google-to-support-these-100-indian-startups/articleshow/99082059.cms"
     }
   ];
 
