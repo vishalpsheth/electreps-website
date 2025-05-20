@@ -21,13 +21,13 @@ const MediaFeatures = () => {
       name: "ANI",
       logo: `${baseUrl}assets/images/ani-logo.png`,
       fallback: "https://via.placeholder.com/150x60?text=ANI",
-      url:  "https://www.aninews.in/news/business/business/publicnext-has-been-selected-as-a-recipient-of-the-google-news-initiative-gni-innovation-challenge-asia-pacific-along-with-funding-from-google20230104131434/"
+      url: "https://www.aninews.in/news/business/business/publicnext-has-been-selected-as-a-recipient-of-the-google-news-initiative-gni-innovation-challenge-asia-pacific-along-with-funding-from-google20230104131434/"
     },
     {
       name: "The Times of India",
       logo: `${baseUrl}assets/images/times-of-india-logo.png`,
       fallback: "https://via.placeholder.com/150x60?text=Times+of+India",
-      url:  "https://timesofindia.indiatimes.com/gadgets-news/appscale-academys-class-of-2023-meity-startup-hub-and-google-to-support-these-100-indian-startups/articleshow/99082059.cms"
+      url: "https://timesofindia.indiatimes.com/gadgets-news/appscale-academys-class-of-2023-meity-startup-hub-and-google-to-support-these-100-indian-startups/articleshow/99082059.cms"
     }
   ];
 
@@ -43,17 +43,24 @@ const MediaFeatures = () => {
           {mediaOutlets.map((media, index) => (
             <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
               <CardContent className="flex items-center justify-center p-4 h-24">
-                <img
-                  src={media.logo}
-                  alt={`${media.name} Logo`}
-                  className="max-h-full max-w-full object-contain"
-                  loading="lazy"
-                  onError={(e) => {
-                    const target = e.currentTarget;
-                    target.onerror = null;
-                    target.src = media.fallback;
-                  }}
-                />
+                <a
+                  href={media.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src={media.logo}
+                    alt={`${media.name} Logo`}
+                    className="max-h-full max-w-full object-contain"
+                    loading="lazy"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      target.onerror = null;
+                      target.src = media.fallback;
+                    }}
+                  />
+                </a>
               </CardContent>
             </Card>
           ))}
